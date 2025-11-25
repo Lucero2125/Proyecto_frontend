@@ -1,0 +1,10 @@
+.task-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
