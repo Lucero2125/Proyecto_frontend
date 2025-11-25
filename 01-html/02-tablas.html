@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Tablas</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1>Tablas</h1>
+    </header>
+    <main>
+      <section>
+        <table border="1">
+          <thead>
+            <tr>
+              <!-- encabezados -->
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th colspan="2">En oferta?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- tr -> td -> llenar info en el td -->
+            <tr>
+              <td>Anticucho</td>
+              <td rowspan="2">S/ 15</td>
+              <td colspan="2">Sí</td>
+              <!-- <td>No</td> -->
+            </tr>
+            <tr>
+              <td>Carapulcra</td>
+              <!-- <td>S/ 15</td> -->
+              <td>Sí</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Ceviche</td>
+              <td>S/ 30</td>
+              <td>Sí</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

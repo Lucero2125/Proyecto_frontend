@@ -1,0 +1,129 @@
+
+/* selector de etiqueta, estilos generales */
+h1 {
+  color:blue;
+  background-color: lightcoral;
+}
+
+/* selector universal, a todo */
+* {
+  font-style:italic;
+}
+
+/* selector de clase, va con prefijo de . */
+.parrafos {
+  font-weight: bold;
+  background-color: peru;
+}
+
+.importante {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+/* selector de id, va con prefijo de # */
+#nota {
+  color: white;
+}
+
+/* operadores */
+/* todos los li que esten dentro de cualquier ul */
+ul li {
+  color:dodgerblue;
+}
+
+/* > aplica SOLO a los primeros elementos hijos */
+.champions > li {
+  font-weight: bold;
+}
+
+/* El primer article adyacente después de span  */
+span + article {
+  background-color: yellow;
+}
+
+/* aplicará a todos los article hermanos que estén después de un span */
+span ~ article {
+  color:steelblue;
+  font-weight: bold;
+}
+
+/* aplicar estilos a los selectores separandolos por la coma, como si fuera un Y */
+.champions, .libertadores {
+  /* border:tamaño forma color */
+  border: 2px solid red;
+}
+
+/* estilos tabla */
+table {
+  /* al darle collapse hacemos que es espaciado entre bordes de una tabla sea nulo */
+  border-collapse: collapse;
+}
+
+td {
+  border:1px solid black;
+}
+
+/* pseudo clases */
+li:hover {
+  text-decoration: underline;
+  color:crimson;
+  cursor: pointer;
+}
+
+
+/* de los tr, toma el séptimo */
+tr:nth-of-type(7) {
+  color: purple;
+  font-weight: bold;
+}
+/* even = par = empate */
+tr:nth-of-type(even){
+  background-color: darkturquoise;
+}
+/* odd = impar */
+tr:nth-of-type(odd){
+  background-color: coral;
+}
+/* contando desde el final cada 4 tr */
+tr:nth-last-of-type(4n) {
+  color: yellow;
+}
+
+tr:nth-of-type(4) > td:nth-of-type(2) {
+  font-weight: bold;
+  color:blue;
+}
+
+/* pero que sea hijo de otro elemento en esa posición */
+p:nth-child(2) {
+  font-size:12px;
+  color: red;
+}
+
+p:nth-child(5){
+  font-size:18px;
+  color: blue;
+}
+
+/* pseudoelementos */
+.titulo-form::first-letter {
+  font-size: 36px;
+  color: red;
+  text-transform: uppercase;
+}
+
+input::placeholder {
+  font-weight: bold;
+  color:skyblue;
+  font-family: 'Courier New';
+}
+
+button::before {
+  /* win + .  para los emojis*/
+  content:"👉";
+}
+
+button::after {
+  content:"👈";
+}

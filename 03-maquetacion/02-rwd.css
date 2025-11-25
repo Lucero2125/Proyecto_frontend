@@ -1,0 +1,67 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: red;
+}
+
+h2 {
+  background-color: aqua;
+}
+
+/* MEDIA QUERIES */
+/* mediomultimedia -> screen, tv, print */
+/* @media <mediomultimedia> and (<condicional/breakpoint>) {}*/
+
+@media screen and (width >= 1024px) {
+  header {
+    color: blue;
+    font-size: 36px;
+    border:2px solid red;
+  }
+
+  h2 {
+    background-color: peru;
+    color:yellow;
+  }
+}
+
+@media (width <= 480px) {
+  header {
+    color: green;
+    background-color: greenyellow;
+  }
+
+  p {
+    font-size: 20px;
+    color: red;
+  }
+}
+
+/* los media queries
+se sugiere implementar de dos maneras*/
+
+/* MÉTODO 1 */
+/* estilos generales orientados a desktop */
+
+/* Y al final media queries */
+
+/* MÉTODO 2*/
+/* tener media queries por bloques junto a otros selectores */
+
+/* .navbar {
+      background-color: blue;
+    }
+
+    @media (width <= 480px) {
+      .navbar {
+        background-color: green;
+      }
+    }
+*/

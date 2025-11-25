@@ -1,0 +1,52 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  border: 2px solid red;
+  background-color: papayawhip;
+  width:300px;
+  height:1300px;
+  margin: 30px;
+  /* los position relative funcionan como referencia para los absolute, un elemento con absolute buscará un elemento con relative "superior" */
+  position: relative;
+
+}
+div {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+.caja {
+  background-color: gold;
+}
+.caja-absolute {
+  background-color: orangered;
+  position: absolute;
+  /* el resto de elementos toma a los elementos con absolute como si no existieran */
+  top:200px;
+  left: 70px;
+  /* right: -20px; */
+
+  z-index: 10;
+}
+.caja-extra {
+  background-color: cyan;
+}
+.caja-fixed {
+  /* tiene como referencia al propio navegador y no se mueve respecto a su posición  */
+  background-color: green;
+  position: fixed;
+  bottom: 10px;
+  right:10px;
+}
+.caja-sticky {
+  background-color: steelblue;
+  /* se "pega" cuando el usuario hace scroll y se desplaza sobrepasando su posición original */
+  position: sticky;
+  top: 20px;
+
+  z-index: 1;
+}

@@ -1,0 +1,65 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.padre {
+  height: 500px;
+  /* width: 600px; */
+  width: 100%; /*100% del elemento padre(body)*/
+  background-color: lightblue;
+  border:2px solid blue;
+  /* flex trabaja desde el elemento padre */
+  display: flex;
+  /* va a permitirnos alinear los elementos de forma horizontal */
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-around; */
+
+  /* para alinear de forma vertical */
+  align-items: center;
+  /* align-items: flex-end; */
+  /* sin dar un tamaño a .hijo con start se acomodan al contenido */
+  /* align-items: flex-start; */
+  /* pero con stretch ocupan toda al altura */
+  /* align-items: stretch; */
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row-reverse; */
+  flex-direction: row;
+  /* gap = brecha, separación  */
+  gap:20px;
+  /* wrap hace que los elementos hijos no modifiquen su tamaño si el contenedor es ó se vuelve pequeño */
+  /* flex-wrap: wrap; */
+  /* con nowrap los elementos hijos cambiarán su tamaño y no "colapsaran" a la parte inferior */
+  flex-wrap: nowrap;
+}
+
+.hijo {
+  /* quitar height y width para probar align items */
+  height: 100px;
+  width: 100px;
+  background-color: coral;
+  border:2px solid red;
+}
+
+/* flex-grow, utiliza el espacio sobrante */
+.hijo1 {
+  /* align-self: flex-start; */
+  flex-grow:1;
+}
+
+.hijo2 {
+  /* align-self: flex-end; */
+  flex-grow:4;
+}
+
+/* flex-shrink, tomará de referencia el espacio faltante */
+.hijo3 {
+  flex-shrink: 4;
+}
+
+.hijo4 {
+  flex-shrink: 2;
+}

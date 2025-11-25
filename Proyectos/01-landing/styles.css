@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  /* border:2px solid red; */
+}
+
+body {
+  /* colocamos "más" fuentes en caso no encuentre rápido */
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", serif;
+  font-weight: 300;
+}
+/* reseteando estilos de ul y a */
+a {
+  text-decoration: none;
+  /* inherit -> heredado, vamos a tomar el color heredado de un elemento padre */
+  color:inherit;
+}
+
+ul {
+  /* para modificar las viñetas de una lista */
+  list-style: none;
+}
+
+/* vamos a usarlo para centrar contenido */
+.contenedor {
+  max-width: 1200px;
+  /* al darle el valor auto le estamos diciendo al navegador, que el se encargue */
+  margin:0 auto;
+}
+
+.cabecera {
+  padding:96px 0;
+  /* text-center alinea SOLO texto de forma horizontal */
+  text-align: center;
+}
+
+.oferta {
+  font-size:12px;
+  background-color: lightgray;
+  padding:3px;
+  /* indica el redondeado de un borde */
+  border-radius: 50px;
+}
+
+.main-title {
+  font-size:72px;
+  /* verticalmente lo usual es aplicarlo o arriba o abajo pero no los dos, al menos no en múñtiples elementos */
+  margin-top: 20px;
+  /* los margenes verticales no se apilan uno encima de otro, más bien da la sensación de solaparse */
+  /* margin-bottom: 20px; */
+}
+
+.text-marketing {
+  color:gray;
+  font-size:20px;
+  margin-top:20px;
+}
+
+.call-to-action {
+  margin-top: 30px;
+}
+
+/* con esta clase damos la forma */
+.btn {
+  padding: 15px 20px;
+  border-radius: 50px;
+  margin-left:10px;
+  min-width: 130px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-white {
+  border: 2px solid black;
+  font-weight: 500;
+}
+
+.btn-dark {
+  background-color: black;
+  color: white;
+}
+
+.rectangulo-header {
+  /* las unidades porcentuales suelen tomar el elemento padre como referencia, en este caso header */
+  width: 100%;
+  margin-top: 64px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 88px;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size:32px;
+  font-weight: 900;
+}
+
+.btn-sm {
+  padding: 8px 15px;
+}
+
+/* questions */
+.questions {
+  height: 450px;
+  margin-bottom: 96px;
+  display: flex;
+  gap:40px;
+}
+
+.question-title {
+  font-size: 54px;
+}
+.question-orange {
+  /* -top -bottom -left -right */
+  border-top: 4px solid orangered;
+  padding-top: 24px;
+}
+
+.question-orange > i {
+  color:orangered;
+  margin: 24px 0 32px 0;
+}
+
+.question-blue {
+  border-top: 4px solid steelblue;
+  padding-top: 24px;
+  align-self: flex-end;
+}
+
+.question-blue > i {
+  color:steelblue;
+  margin: 24px 0 32px 0;
+}
+/* data */
+.data {
+  padding:48px;
+}
+
+.title-data {
+  font-size:48px;
+  margin-bottom: 20px;
+}
+
+.table-workspace {
+  width: 100%;
+  /* quita el espaciado entre td's */
+  border-collapse: collapse;
+}
+
+.table-workspace td {
+  /* border:1px solid black; */
+  padding: 16px;
+}
+
+/* espacio aplica para elementos hijos */
+/* De tablework-space tendrá elementos hijos que son tr tomamos los impares (odd) y dentro de esos tr buscamos los td que son hijos*/
+.table-workspace tr:nth-of-type(odd) td{
+  background-color: gold;
+  /* border-radius: 40px; */
+}
+
+.table-workspace tr:nth-of-type(odd) td:first-child {
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+.table-workspace tr:nth-of-type(odd) td:last-child {
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+/* es para desktop */
+#check-menu {
+  visibility: hidden;
+}
+
+.open-menu, .close-menu {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+/* el tamaño de texto predeterminado a excepción de títulos h1,h2... es de 16px */
+@media (width <= 480px) {
+  .cabecera {
+    padding: 48px;
+  }
+
+  .main-title {
+    font-size: 48px;
+    padding: 16px;
+  }
+
+  .text-marketing {
+    font-size: 16px;
+    padding: 16px;
+    /* text-align: left; */
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  /* questions */
+  .questions {
+    flex-direction: column;
+    /* fit-content que se ajuste al contenido */
+    height:fit-content;
+    margin-bottom: 30px;
+    gap:24px;
+    padding:0 20px;
+  }
+
+  .question-title {
+    font-size: 36px;
+  }
+
+  .questions i {
+    margin: 16px 0 20px 0;
+  }
+
+  /* data */
+  .data {
+    width: 100%;
+    border:4px solid red;
+    /* overflow funciona en el eje x y y */
+    overflow-x: scroll;
+  }
+
+  .table-workspace {
+    /* ancho que se adecuado para el contenido que tiene */
+    width: 800px;
+  }
+
+  .open-menu, .close-menu {
+    display: block;
+  }
+
+  .links {
+    background-color: yellow;
+    flex-direction: column;
+    position: fixed;
+    padding:40px;
+    top:0;
+    right: -100vw;
+    gap:40px;
+    /* vw - viewport unit */
+    width:100vw;
+    /* vh - viewport height */
+    height: 100vh;
+    /* transiciones */
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  #check-menu:checked ~ .links {
+    right:0;
+  }
+
+  .navbar {
+    padding:30px;
+  }
+}

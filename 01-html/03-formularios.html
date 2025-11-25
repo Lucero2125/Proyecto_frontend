@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- información y configuración -->
+     <title>Formulario</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <!-- visual del sitio/app -->
+    <header>
+      <h1>Formulario de Registro</h1>
+    </header>
+    <main>
+      <form>
+        <label for="input-nombre">Nombre completo:</label>
+        <!-- value es el valor de escritura que tendría el input -->
+        <input
+          id="input-nombre"
+          type="text"
+          placeholder="Ej. Juan Perez"
+          name="input-nombre"
+          value=""
+          required
+        >
+        <!-- break, br, salto de línea -->
+        <br>
+        <label for="input-email">Email</label>
+        <input
+          id="input-email"
+          type="email"
+          placeholder="Ej. jperez@gmail.com"
+          name="input-email"
+        >
+        <br>
+        <label for="input-edad">Edad</label>
+        <input
+          id="input-edad"
+          type="number"
+          placeholder="Ej. 25"
+          name="input-edad"
+          min="18"
+          max="65"
+        >
+        <br>
+        <label for="input-fecha">Fecha</label>
+        <input
+          id="input-fecha"
+          type="date"
+          name="input-fecha"
+          min="2025-10-01"
+          max="2025-10-31"
+        >
+        <br>
+        <label for="input-password">Contraseña</label>
+        <input
+          id="input-password"
+          type="password"
+          placeholder="Ej. dsgajh23423"
+          name="input-password"
+          minlength="6"
+          maxlength="20"
+        >
+        <br>
+        <label for="input-numero">Celular</label>
+        <input
+          id="input-numero"
+          type="text"
+          placeholder="Ej. dsgajh23423"
+          name="input-numero"
+          pattern="^\+51(?:0[1-9]|1\d|2[0-5])9\d{8}$"
+        >
+        <br>
+        <!-- en los radio usamos name para agrupar los input radio y solo se pueda seleccionar uno de los tres -->
+        <h4>Género</h4>
+        <input
+          type="radio"
+          id="masculino"
+          name="genero"
+        >
+        <label for="masculino">Masculino</label>
+        <input
+          type="radio"
+          id="femenino"
+          name="genero"
+        >
+        <label for="femenino">Femenino</label>
+        <input
+          type="radio"
+          id="no-divulgar"
+          name="genero"
+        >
+        <label for="no-divulgar">No divulgar</label>
+        <h4>Hobbies</h4>
+        <input
+          type="checkbox"
+          id="hobby1"
+        >
+        <label for="hobby1">Fútbol</label>
+        <input
+          type="checkbox"
+          id="hobby2"
+        >
+        <label for="hobby2">Juegos de mesa</label>
+        <input
+          type="checkbox"
+          id="hobby3"
+        >
+        <label for="hobby3">Tocar Guitarra</label>
+        <input
+          type="checkbox"
+          id="hobby4"
+        >
+        <label for="hobby4">Ir al Cine</label>
+        <!-- select -->
+        <br/>
+        <h4>Selecciona tu ciudad</h4>
+        <select name="ciudad">
+          <option disabled selected>
+            Selecciona una ciudad
+          </option>
+          <option>Lima</option>
+          <option>Arequipa</option>
+          <option>Cusco</option>
+          <option>Trujillo</option>
+          <option>Ica</option>
+          <option>Ancash</option>
+          <option>Puerto Maldonado</option>
+        </select>
+        <br>
+        <h4>Cursos</h4>
+        <input list="cursos">
+        <datalist id="cursos">
+          <option value="React">React</option>
+          <option value="Tailwind">Tailwind</option>
+          <option value="Angular">Angular</option>
+          <option value="Zustand">Zustand</option>
+        </datalist>
+        <!-- horizontal rule -->
+        <hr>
+        <!-- Submit -->
+        <button type="submit">
+          Enviar
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
